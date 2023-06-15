@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,svg {
+    display: block;
+}
+
+html {
+    font-size: 65.5%;
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+}
+
+//variables
+$Pink: hsl(322, 100%, 66%);
+$LightPink: hsl(321, 100%, 78%);
+$LightRed: hsl(0, 100%, 63%);
+$VeryDarkCyan: hsl(192, 100%, 9%);
+$VeryPaleBlue: hsl(207, 100%, 98%);
+$ff-body: 'Open Sans', sans-serif;
+$ff-heading: 'Poppins', sans-serif;
+
+
+body {
+    font-size: 1.8rem;
+    background: $VeryPaleBlue;
+    color: $VeryDarkCyan;
+    font-family: $ff-body;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3 {
+    font-family: $ff-heading;
+}
+
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+
+.container {
+    padding: 1em;
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $VeryPaleBlue;
+    z-index: 100;
+    padding: 1em;
+    .container {
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 0;
+        img {
+            width: 150px;
+            height: auto;
+        }
+        a {
+            font-size: 1.3rem;
+            color: $Pink;
+            border: 1px solid $Pink;
+            padding: .5em 2em;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+            border-radius: 30px;
+            -webkit-transition: opacity .3s ease-in-out;
+            -moz-transition: opacity .3s ease-in-out;
+            -ms-transition: opacity .3s ease-in-out;
+            -o-transition: opacity .3s ease-in-out;
+            transition: opacity .3s ease-in-out;
+            &:hover {
+                opacity: 70%;
+            }
+        }
+    }
+}
+
+main {
+    .intro {
+        margin: 7em 2em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            text-align: center;
+           margin: 1em 0;
+        }
+        .hero-intro {
+            font-size: 1.5rem;
+            max-width: 500px;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        a {
+            color: $VeryPaleBlue;
+            background: $Pink;
+            padding: .7em 3em;
+            margin-bottom: 3em;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+            border-radius: 30px;
+            -webkit-transition: opacity .3s ease-in-out;
+            -moz-transition: opacity .3s ease-in-out;
+            -ms-transition: opacity .3s ease-in-out;
+            -o-transition: opacity .3s ease-in-out;
+            transition: opacity .3s ease-in-out;
+            @media screen and (width<=420px) {
+                font-size: 1.3rem;
+            }
+            &:hover {
+                opacity: 70%;
+            }
+        }
+        img {
+            width: 100%;
+        }
+        .info-hero {
+            margin-top: 5em;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            @media screen and (width<=500px) {
+                flex-direction: column;
+            }
+            img {
+                width: 28px;
+            }
+            .stat {
+                text-align: left;
+                font-size: 5rem;
+                font-weight: 700;
+            }
+            small {
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin: 15em 0;
+    @media screen and (width<=768px) {
+        grid-template-columns: 1fr;
+    }
+    .content {
+        h2 {
+            margin-bottom: .7em;
+        }
+        @media screen and (width<=768px) {
+            grid-row: 1;
+
+        }
+    }
+    .image {
+        @media screen and (width<=768px) {
+            grid-row: 2;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.closing {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15rem;
+    h2 {
+        text-align: center;
+    }
+    a {
+        background: $Pink;
+        color: $VeryPaleBlue;
+        padding: .5em 3em;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        border-radius: 30px;
+        -webkit-transition: opacity .3s ease-in-out;
+        -moz-transition: opacity .3s ease-in-out;
+        -ms-transition: opacity .3s ease-in-out;
+        -o-transition: opacity .3s ease-in-out;
+        transition: opacity .3s ease-in-out;
+        &:hover {
+            opacity: 70%;
+        }
+    }
+}
+
+.footerTop {
+    min-height: 200px;
+    width: 100%;
+    margin-bottom: 0;
+    background-image: url('/images/bg-footer-top-desktop.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (width<=768px) {
+        background-image: url('/images/bg-footer-top-mobile.svg');
+    }
+}
+
+footer {
+    margin-top: 0;
+    background: $VeryDarkCyan;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $VeryPaleBlue;
+    .container {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+        @media screen and (width<=768px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        .newsletter {
+            grid-column: 2;
+            grid-row: 1;
+            @media screen and (width<=768px) {
+                grid-column: 1;
+                grid-row: 1;
+            }
+            h3 {
+                text-transform: uppercase;
+                margin-bottom: 1em;
+            }
+            p {
+                max-width: 375px;
+                width: 100%;
+                margin-bottom: 1em;
+            }
+            form {
+                align-items: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+                input {
+                    padding: .3em;
+                    font-size: 1em;
+                }
+                button {
+                    border: none;
+                    outline: none;
+                    background: $Pink;
+                    padding: .3em 1.2em;
+                    font-size: 1em;
+                    color: $VeryPaleBlue;
+                    -webkit-border-radius: 8px;
+                    -moz-border-radius: 8px;
+                    -ms-border-radius: 8px;
+                    -o-border-radius: 8px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    -webkit-transition: opacity .3s ease-in-out;
+                    -moz-transition: opacity .3s ease-in-out;
+                    -ms-transition: opacity .3s ease-in-out;
+                    -o-transition: opacity .3s ease-in-out;
+                    transition: opacity .3s ease-in-out;
+                    &:hover {
+                        opacity: 70%;
+                    }
+                }
+            }
+        }
+        .info {
+            max-width: 375px;
+            width: 100%;
+            grid-column: 1;
+            grid-row: 1; 
+            @media screen and (width<=768px) {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            .image {
+                margin-bottom: -2em;
+                svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            p {
+                margin-bottom: 1em;
+            }
+            .contact {
+                gap: 2rem;
+                margin: 1em 0;
+                img {
+                    width: auto;
+                    height: 20px;
+                }
+            }
+            .social {
+                gap: 2rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
